@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { MainbodyComponent } from './mainbody/mainbody.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchComponent } from './search/search.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainbodyComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
