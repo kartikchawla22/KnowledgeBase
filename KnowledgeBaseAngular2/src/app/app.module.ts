@@ -14,8 +14,8 @@ import { UsersComponent } from './users/users.component';
 import { AddheadingComponent } from './addheading/addheading.component';
 import {  KnowledgebasedataService } from './knowledgebasedata.service';
 const AllRoutes = [
-{path : 'users', component:UsersComponent}
-
+{path : 'users', component:UsersComponent},
+{ path : '', component:MainbodyComponent}
 ]
 
 @NgModule({
