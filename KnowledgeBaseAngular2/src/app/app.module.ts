@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { MainbodyComponent } from './mainbody/mainbody.component';
@@ -10,6 +12,11 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { AddheadingComponent } from './addheading/addheading.component';
+import {  KnowledgebasedataService } from './knowledgebasedata.service';
+const AllRoutes = [
+{path : 'users', component:UsersComponent}
+
+]
 
 @NgModule({
   declarations: [
@@ -24,9 +31,10 @@ import { AddheadingComponent } from './addheading/addheading.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(AllRoutes)
   ],
-  providers: [],
+  providers: [KnowledgebasedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,7 +9,7 @@ export class AddheadingComponent implements OnInit {
 
   constructor() { }
 AddHeading(AddHeadingForm){
-console.log(AddHeadingForm.value);
+// console.log(AddHeadingForm.value);
 
 }
   ngOnInit() {
