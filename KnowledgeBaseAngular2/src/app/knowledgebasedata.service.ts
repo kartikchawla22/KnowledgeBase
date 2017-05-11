@@ -7,8 +7,6 @@ import 'rxjs/add/operator/map';
 export class KnowledgebasedataService {
   constructor(private httpService: Http,private httpService1: Http) { 
   }
-
-
     
   GetTitles(): Observable<any>{
     var a:string='http://192.168.15.148:4000/api/v1/titles';
@@ -23,6 +21,8 @@ export class KnowledgebasedataService {
       data => data.json()
     );
 }
+
+
  GetUsers(): Observable<any>{
   var a:string='https://api.github.com/users/v1/users';
     return this.httpService.get(a).map(
