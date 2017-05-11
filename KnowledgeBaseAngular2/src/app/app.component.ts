@@ -9,23 +9,18 @@ import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-
- 
-
-  ngOnInit() {
-
-  }
-  
-
-  showHeader = true;
-
+ShowHeader = true;
+ShowMainBody = true;
+ShowSearch = true;
   constructor(private router: Router, private _route: ActivatedRoute)
    {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd){
-        console.log(this._route.url);
-        // this._route.url.value["0"].path = 
+       var path = event.url;
+       if(path === "/users") 
+       this.ShowHeader = false;
+       this.ShowMainBody = false;
+       this.ShowSearch = false;
       }
     });
   }

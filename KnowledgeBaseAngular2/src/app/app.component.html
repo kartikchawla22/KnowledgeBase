@@ -1,35 +1,8 @@
-
-<!--<app-header></app-header>-->
-
-
-
 <app-header *ngIf="ShowHeader"></app-header>
-<app-search *ngIf = "ShowSearch"></app-search>
-
-
-<app-header *ngIf="showHeader"></app-header>
-
-<app-search></app-search>
-
-
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
 
 <app-mainbody *ngIf = "ShowMainBody"></app-mainbody>
+<app-search *ngIf = "ShowSearch"></app-search>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
 
-<app-users *ngIf="ShowUsers"></app-users>
 <!--<app-addheading></app-addheading>-->
-
-<app-users></app-users>
-<app-addheading></app-addheading>
-
-
-<app-footer></app-footer>
-
- <router-outlet></router-outlet>
-
-<app-footer></app-footer>
-
- <router-outlet></router-outlet>
-
