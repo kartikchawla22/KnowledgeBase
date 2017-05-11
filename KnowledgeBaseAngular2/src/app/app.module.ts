@@ -20,7 +20,6 @@ import { AfterLoginComponent } from './after-login/after-login.component';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
-<<<<<<< HEAD
   component:UsersComponent
 // children:[
 //    {
@@ -40,11 +39,10 @@ const AllRoutes = [
  {
    path : 'terms',
    component:TermsComponent
- },
-{ path : '', component:MainbodyComponent}
-=======
-  component:UsersComponent}
->>>>>>> d75b0b53428866ff2efe87b042630cdc095e829d
+ }
+ // { path : '', component:MainbodyComponent,
+//   component:UsersComponent
+// }
 ]
 @NgModule({
   declarations: [
