@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 export class KnowledgebasedataService {
   constructor(private httpService: Http,private httpService1: Http) { 
   }
+
+
     
   GetTitles(): Observable<any>{
     var a:string='http://192.168.15.148:4000/api/v1/titles';
