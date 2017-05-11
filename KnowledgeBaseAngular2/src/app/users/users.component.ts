@@ -6,14 +6,10 @@ import { Validators, FormGroup, FormBuilder, FormControl, FormsModule } from '@a
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-public UserForm : FormGroup;
-  constructor(public FormValidation : FormBuilder) {
+  constructor() {
 
-this.UserForm = this.FormValidation.group({
-Username :[null, [Validators.required, Validators.pattern('[a-z]|[A-Z]')]],
-Password : [null, [Validators.required]]
 
-});
+
 
 
    }
