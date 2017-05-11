@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -18,7 +18,9 @@ import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
 import { AfterLoginComponent } from './after-login/after-login.component';
 const AllRoutes = [
+{ path : '', component:MainbodyComponent},
 { path : 'users', 
+<<<<<<< HEAD
   component:UsersComponent
 // children:[
 //    {
@@ -40,6 +42,9 @@ const AllRoutes = [
    component:TermsComponent
  },
 { path : '', component:MainbodyComponent}
+=======
+  component:UsersComponent}
+>>>>>>> d75b0b53428866ff2efe87b042630cdc095e829d
 ]
 @NgModule({
   declarations: [
@@ -59,6 +64,7 @@ const AllRoutes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AllRoutes)
   ],
  entryComponents:[HeaderComponent],
