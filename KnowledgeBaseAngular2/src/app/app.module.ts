@@ -14,10 +14,7 @@ import { UsersComponent } from './users/users.component';
 import { AddheadingComponent } from './addheading/addheading.component';
 import {  KnowledgebasedataService } from './knowledgebasedata.service';
 const AllRoutes = [
-<<<<<<< HEAD
-{path : 'users', component:UsersComponent},
 { path : '', component:MainbodyComponent},
-=======
 { path : 'users', 
   component:UsersComponent
 // children:[
@@ -28,7 +25,6 @@ const AllRoutes = [
 //  ]
  },
 { path : '', component:MainbodyComponent}
->>>>>>> 52d568e798ffa073a38276190ddbacadbb390ba4
 ]
 @NgModule({
   declarations: [

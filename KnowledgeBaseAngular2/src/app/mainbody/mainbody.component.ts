@@ -21,10 +21,10 @@ AddComponentHeader() {
   //  }
   ngOnInit() {
   // this.AddComponentSearch();
-      const factory = this.componentFactoryResolver.resolveComponentFactory(HeaderComponent);
-       const ref = this.viewContainerRef.createComponent(factory,0);
-       ref.changeDetectorRef.detectChanges();
-       console.log("hi");
-  this.AddComponentHeader();
+  //     const factory = this.componentFactoryResolver.resolveComponentFactory(HeaderComponent);
+  //      const ref = this.viewContainerRef.createComponent(factory,0);
+  //      ref.changeDetectorRef.detectChanges();
+  //      console.log("hi");
+  // this.AddComponentHeader();
   }
 }
