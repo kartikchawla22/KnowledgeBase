@@ -8,27 +8,27 @@ export class KnowledgebasedataService {
   constructor(private httpService: Http,private httpService1: Http) { 
   }
     
-  getTitles(): Observable<any>{
+  GetTitles(): Observable<any>{
     var a:string='http://192.168.15.148:4000/api/v1/titles';
     return this.httpService.get(a).map(
       data => data.json()
     );
   }
   
-  getHeadings(): Observable<any>{
+  GetHeadings(): Observable<any>{
   var a:string='http://192.168.15.148:4000/api/v1/headings';
     return this.httpService.get(a).map(
       data => data.json()
     );
 }
- getUsers(): Observable<any>{
+ GetUsers(): Observable<any>{
   var a:string='https://api.github.com/users/v1/users';
     return this.httpService.get(a).map(
       data => data.json()
     );
 }
 
-getSearch(): Observable<any>{
+GetSearch(): Observable<any>{
   var a:string='http://192.168.15.148:4000/api/v1/search';
     return this.httpService.get(a).map(
       data => data.json()
