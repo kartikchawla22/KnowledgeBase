@@ -24,8 +24,6 @@ this.err = true;
 });
 }
 
-
-
    
 
   ngOnInit() {
