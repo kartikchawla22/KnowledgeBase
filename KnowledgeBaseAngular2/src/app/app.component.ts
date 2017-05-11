@@ -8,13 +8,20 @@ import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
 })
 export class AppComponent {
   title = 'app works!';
-  showHeader = true;
-
+  ShowHeader = true;
+  ShowSearch = true;
+  ShowMainBody = true;
+ShowUsers = false;
   constructor(private router: Router, private _route: ActivatedRoute) {
     this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd){
-        console.log(this._route.url);
-        // this._route.url.value["0"].path = 
+      if (event instanceof NavigationEnd) {
+        var path = event.url;
+        if (path === "/users") {
+          this.ShowHeader = false;
+          this.ShowSearch = false;
+          this.ShowMainBody = false;
+          this.ShowUsers = true;
+        }
       }
     });
   }

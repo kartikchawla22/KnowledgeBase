@@ -1,12 +1,12 @@
 
-<app-header *ngIf="showHeader"></app-header>
-<app-search></app-search>
+<app-header *ngIf="ShowHeader"></app-header>
+<app-search *ngIf = "ShowSearch"></app-search>
 
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>
 
-<app-mainbody></app-mainbody>
+<app-mainbody *ngIf = "ShowMainBody"></app-mainbody>
 
-<app-users></app-users>
-<app-addheading></app-addheading>
+<app-users *ngIf="ShowUsers"></app-users>
+<!--<app-addheading></app-addheading>-->
