@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from "@angular/router/router";
+import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ export class AppComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd){
         console.log(this._route.url);
+        // this._route.url.value["0"].path = 
       }
     });
   }

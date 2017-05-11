@@ -16,15 +16,7 @@ import {  KnowledgebasedataService } from './knowledgebasedata.service';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
-  component:UsersComponent
-// children:[
-//    {
-//      path:'users' ,
-//      component: UsersComponent
-//    }
-//  ]
- },
-{ path : '', component:MainbodyComponent}
+  component:UsersComponent}
 ]
 @NgModule({
   declarations: [
