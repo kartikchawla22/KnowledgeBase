@@ -1,34 +1,38 @@
-<button (click) = "GetTitlelist()">Click</button>
+<!--<button (click) = "GetHeadinglist()">Click</button>-->
 
 <div class="Movies">
     <h3 align = "center">Movies</h3>
   <div class="well well-lg">
-    <ul>
-  <li>HEADING1</li>
-    </ul>
+    <div>
+      <ul *ngFor="let item of Movies">
+        
+  <li><a routerLink = '/{{item}}'  routerLinkActive = "active">{{item}}</a></li>
+    </ul> 
+    </div>
+   
 </div>
 </div>
 <div class="Novels" >
     <h3 align = "center">Novels</h3>
   <div class="well well-lg">
-    <ul>
-  <li>HEADING1</li>
+    <ul *ngFor="let item of Novels">
+    <li><a routerLink = '/{{item}}'  routerLinkActive = "active">{{item}}</a></li>
     </ul>
 </div>
 </div>
 <div class="Poems">
     <h3 align = "center">Poems</h3>
   <div class="well well-lg">
-    <ul>
-  <li>HEADING1</li>
+    <ul *ngFor="let item of Poems">
+    <li><a routerLink = '/{{item}}'  routerLinkActive = "active">{{item}}</a></li>
     </ul>
 </div>
 </div>
 <div class="Biography">
     <h3 align = "center">Biography</h3>
   <div class="well well-lg">
-    <ul>
-  <li>HEADING1</li>
+    <ul *ngFor="let item of Biography">
+   <li><a routerLink = '/{{item}}'  routerLinkActive = "active">{{item}}</a></li>
     </ul>
 </div>
 </div>

@@ -1,7 +1,14 @@
 <div class="container">
   <form (ngSubmit) = 'AddHeading(AddHeadingForm)' #AddHeadingForm ='ngForm'>
-    <input type="text" name="Heading" #Heading placeholder="Enter the new Heading">
-    <input type="text" name="Data" #Data placeholder="Enter Data">
+    <input type="text" name="Heading" #Heading placeholder="Enter the new Heading" [(ngModel)]="H_Name">
+    <input type="text" name="Data" #Data placeholder="Enter Data" [(ngModel)]="H_Data">
     <button>Submit</button>
   </form>
 </div>
+
+
+
+<select #DropDown>
+    <option *ngFor="let item of Obj" value="{{item.T_Id}}" required>{{item.T_Name}}</option>
+    </select>
+  <button (click)="getdetails(DropDown.value)">Select</button>

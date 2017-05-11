@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataexchangeService } from '../dataexchange.service';
+import {  KnowledgebasedataService } from '../knowledgebasedata.service';
 
 @Component({
   selector: 'app-addheading',
@@ -6,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addheading.component.css']
 })
 export class AddheadingComponent implements OnInit {
+Obj;
+H_Name : String;
+H_Data : String;
 
-  constructor() { }
+
+
+  constructor(public DataExchange : DataexchangeService, public PostData : KnowledgebasedataService) { }
 AddHeading(AddHeadingForm){
-// console.log(AddHeadingForm.value);
 
 }
+getdetails(Drop){
+  console.log(Drop);
+}
   ngOnInit() {
+
+this.Obj = this.DataExchange.GetData();
+console.log(this.Obj);
+
   }
 
 }

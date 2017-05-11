@@ -16,6 +16,7 @@ import {  KnowledgebasedataService } from './knowledgebasedata.service';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
+import { DataexchangeService } from './dataexchange.service';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
@@ -44,7 +45,8 @@ const AllRoutes = [
 //   component:UsersComponent
 // }
  
-{ path : '', component:MainbodyComponent}
+{ path : '', component:MainbodyComponent},
+{ path : 'addheading' , component: AddheadingComponent},
 ]
 @NgModule({
   declarations: [
@@ -67,7 +69,7 @@ const AllRoutes = [
     RouterModule.forRoot(AllRoutes)
   ],
  entryComponents:[HeaderComponent],
-  providers: [KnowledgebasedataService],
+  providers: [KnowledgebasedataService, DataexchangeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
