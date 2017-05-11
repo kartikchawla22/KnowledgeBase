@@ -28,6 +28,7 @@ const AllRoutes = [
 //    }
 //  ]
  },
+{ path : 'users', component:UsersComponent},
  {
    path : 'about',
    component:AboutComponent
@@ -39,10 +40,12 @@ const AllRoutes = [
  {
    path : 'terms',
    component:TermsComponent
- }
+ },
  // { path : '', component:MainbodyComponent,
 //   component:UsersComponent
 // }
+ 
+{ path : '', component:MainbodyComponent}
 ]
 @NgModule({
   declarations: [
