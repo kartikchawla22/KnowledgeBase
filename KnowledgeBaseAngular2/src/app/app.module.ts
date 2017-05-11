@@ -16,7 +16,6 @@ import {  KnowledgebasedataService } from './knowledgebasedata.service';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
-import { AfterLoginComponent } from './after-login/after-login.component';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
@@ -59,7 +58,6 @@ const AllRoutes = [
     ContactsComponent,
     AboutComponent,
     TermsComponent,
-    AfterLoginComponent
   ],
   imports: [
     BrowserModule,

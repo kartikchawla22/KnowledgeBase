@@ -1,30 +1,33 @@
-import { Component, OnInit, ComponentFactoryResolver, ViewContainerRef  } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { SearchComponent } from '../search/search.component';
+import { Component, OnInit} from '@angular/core';
+import {  KnowledgebasedataService } from '../knowledgebasedata.service';
 
 @Component({
   selector: 'app-mainbody',
   templateUrl: './mainbody.component.html',
   styleUrls: ['./mainbody.component.css'],
-  entryComponents : [SearchComponent]
 })
 export class MainbodyComponent implements OnInit {
+data =[];
+err = false;
+  constructor( public KnowledgeService : KnowledgebasedataService) {}
 
-  constructor( public componentFactoryResolver: ComponentFactoryResolver, public viewContainerRef: ViewContainerRef) { }
-AddComponentHeader() {
+GetTitlelist(){
+this.KnowledgeService.GetTitles().subscribe(res=>{
+ this.data=res
+ this.err = false;
+ console.log(this.data);
+ 
+}
+,errorr =>{
+alert('Error') ;
+this.err = true;
+});
+}
+
+
+
    
-   }
-  //  AddComponentSearch() {
-  //      const factory = this.componentFactoryResolver.resolveComponentFactory(SearchComponent);
-  //      const ref = this.viewContainerRef.createComponent(factory,0);
-  //      ref.changeDetectorRef.detectChanges();
-  //  }
+
   ngOnInit() {
-  // this.AddComponentSearch();
-  //     const factory = this.componentFactoryResolver.resolveComponentFactory(HeaderComponent);
-  //      const ref = this.viewContainerRef.createComponent(factory,0);
-  //      ref.changeDetectorRef.detectChanges();
-  //      console.log("hi");
-  // this.AddComponentHeader();
   }
 }
