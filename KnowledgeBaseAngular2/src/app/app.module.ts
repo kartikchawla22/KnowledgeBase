@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -15,7 +15,7 @@ import { AddheadingComponent } from './addheading/addheading.component';
 import {  KnowledgebasedataService } from './knowledgebasedata.service';
 const AllRoutes = [
 {path : 'users', component:UsersComponent},
-{ path : '', component:MainbodyComponent}
+{ path : '', component:MainbodyComponent},
 ]
 
 @NgModule({
@@ -32,6 +32,7 @@ const AllRoutes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AllRoutes)
   ],
   providers: [KnowledgebasedataService],

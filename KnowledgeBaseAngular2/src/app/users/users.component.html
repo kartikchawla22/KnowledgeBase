@@ -1,18 +1,27 @@
 <div class="container">
-  <form [formGroup]='UserForm' #UserForm ='ngForm' class="form-horizontal" (ngSubmit)='OnUserFormSubmit(UserForm)' name="Form">
+  <form [formGroup]='UserForm' #UserFormRef='ngForm' class="form-horizontal" (ngSubmit)='OnUserFormSubmit(UserFormRef)' name="Form">
     <div class="form-group">
-      <label class="control-label col-sm-2">Username:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" placeholder="Enter Username" name="Username" formControlName="Username">
-        <small *ngIf="!UserForm.controls['Username'].valid">*</small>
+      <label class="control-label col-sm-2">Username</label>
+      <div class="col-sm-6">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Enter Username" name="Usernames" formControlName="Username">
+
+        </div>
       </div>
+      <small *ngIf="!UserForm.controls['Username'].valid">*</small>
     </div>
+
     <div class="form-group">
       <label class="control-label col-sm-2">Password:</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" placeholder="Enter password" name="Password">
-        <small *ngIf="!UserForm.controls['Password'].valid">*</small>
+      <div class="col-sm-6">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" class="form-control" placeholder="Enter password" name="Password" formControlName="Password">
+
+        </div>
       </div>
+      <small *ngIf="!UserForm.controls['Password'].valid">*</small>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
