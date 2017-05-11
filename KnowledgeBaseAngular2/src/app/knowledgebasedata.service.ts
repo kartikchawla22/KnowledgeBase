@@ -5,21 +5,36 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class KnowledgebasedataService {
-public name1:string="";
   constructor(private httpService: Http,private httpService1: Http) { 
   }
     
-  getdetails(): Observable<any>{
-    console.log(this.name1);
-    var a:string='https://api.github.com/users/';
+  getTitles(): Observable<any>{
+    var a:string='http://192.168.15.148:4000/api/v1/titles';
     return this.httpService.get(a).map(
       data => data.json()
     );
   }
-  setuser(dat)
-  {
-     this.name1=dat;
-  }
+  
+  getHeadings(): Observable<any>{
+  var a:string='http://192.168.15.148:4000/api/v1/headings';
+    return this.httpService.get(a).map(
+      data => data.json()
+    );
+}
+ getUsers(): Observable<any>{
+  var a:string='https://api.github.com/users/v1/users';
+    return this.httpService.get(a).map(
+      data => data.json()
+    );
+}
+
+getSearch(): Observable<any>{
+  var a:string='http://192.168.15.148:4000/api/v1/search';
+    return this.httpService.get(a).map(
+      data => data.json()
+    );
+}
+
 
      private handleError(error: any) {
 
