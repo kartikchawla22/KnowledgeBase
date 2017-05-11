@@ -13,10 +13,26 @@ import { SearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { AddheadingComponent } from './addheading/addheading.component';
 import {  KnowledgebasedataService } from './knowledgebasedata.service';
+import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component';
+import { TermsComponent } from './terms/terms.component';
+import { AfterLoginComponent } from './after-login/after-login.component';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
-{ path : 'users', 
-  component:UsersComponent}
+{ path : 'users', component:UsersComponent},
+ {
+   path : 'about',
+   component:AboutComponent
+ },
+ {
+   path : 'contacts',
+   component:ContactsComponent
+ },
+ {
+   path : 'terms',
+   component:TermsComponent
+ },
+{ path : '', component:MainbodyComponent}
 ]
 @NgModule({
   declarations: [
@@ -26,7 +42,11 @@ const AllRoutes = [
     FooterComponent,
     SearchComponent,
     UsersComponent,
-    AddheadingComponent
+    AddheadingComponent,
+    ContactsComponent,
+    AboutComponent,
+    TermsComponent,
+    AfterLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +55,7 @@ const AllRoutes = [
     ReactiveFormsModule,
     RouterModule.forRoot(AllRoutes)
   ],
+ entryComponents:[HeaderComponent],
   providers: [KnowledgebasedataService],
   bootstrap: [AppComponent]
 })
