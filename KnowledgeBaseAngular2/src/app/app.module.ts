@@ -33,7 +33,6 @@ const AllRoutes = [
 // ]
  },
   {
-<<<<<<< HEAD
      path:'addheading' ,
      component: AddheadingComponent,canActivate: [CanActivateViaAuthGuard]
    },
@@ -41,40 +40,22 @@ const AllRoutes = [
    path : 'about',
    component:AboutComponent
  },
+ 
  {
    path : 'contacts',
    component:ContactsComponent
  },
+
  {
    path : 'terms',
    component:TermsComponent
- }
-=======
-    path: 'users',
-    component: UsersComponent
-    // children:[
-    //    {
-    //      path:'users' ,
-    //      component: UsersComponent
-    //    }
-    //  ]
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'contacts',
-    component: ContactsComponent
-  },
-  {
-    path: 'terms',
-    component: TermsComponent
-  },
- 
-  { path: 'addheading', component: AddheadingComponent },
-{path : 'searchdisplay', component : SearchdisplayComponent}
->>>>>>> ee3c11e1a01e6e260cc4bc3313e94aca7690b0bd
+ },
+
+{
+  path : 'searchdisplay', 
+  component : SearchdisplayComponent
+}
+
 ]
 @NgModule({
   declarations: [
