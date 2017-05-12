@@ -27,6 +27,7 @@ CP = 0;
 err = false;
   constructor( public KnowledgeService : KnowledgebasedataService, public DataExchange : DataexchangeService) {}
 
+// This function will get the list of titles.
 GetTitlelist(){
 this.KnowledgeService.GetTitles().subscribe(res=>{
  this.Titles=res
@@ -34,14 +35,14 @@ this.KnowledgeService.GetTitles().subscribe(res=>{
 this.DataExchange.SendData(this.Titles);
 
 }
-
-
-,errorr =>{
+,errorr =>{             // If there is an error it will alert an error.
 alert('Error') ;
 this.err = true;
 });
 }
 
+
+// This function will get the list of headings and the new headings users want to add more headings.
 GetHeadinglist(){
 this.KnowledgeService.GetHeadings().subscribe(res=>{
  this.data=res
@@ -69,14 +70,14 @@ this.CB++;
  console.log(this.Movies);
  
 }
-,errorr =>{
+,errorr =>{            // If there is an error it will alert an error.
 alert('Error') ;
 this.err = true;
 });
 }
 
 
-
+//This function will give the list of users those who can login.
 GetUsersist(){
 this.KnowledgeService.GetUsers().subscribe(res=>{
  this.data=res
@@ -84,7 +85,7 @@ this.KnowledgeService.GetUsers().subscribe(res=>{
  console.log(this.data);
  
 }
-,errorr =>{
+,errorr =>{            //If there is an error it will alert an error.
 alert('Error') ;
 this.err = true;
 });

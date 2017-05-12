@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
 import { DataexchangeService } from './dataexchange.service';
 import {Configuration} from './config';
+import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
@@ -32,6 +33,7 @@ const AllRoutes = [
 // ]
  },
   {
+<<<<<<< HEAD
      path:'addheading' ,
      component: AddheadingComponent,canActivate: [CanActivateViaAuthGuard]
    },
@@ -47,6 +49,32 @@ const AllRoutes = [
    path : 'terms',
    component:TermsComponent
  }
+=======
+    path: 'users',
+    component: UsersComponent
+    // children:[
+    //    {
+    //      path:'users' ,
+    //      component: UsersComponent
+    //    }
+    //  ]
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent
+  },
+  {
+    path: 'terms',
+    component: TermsComponent
+  },
+ 
+  { path: 'addheading', component: AddheadingComponent },
+{path : 'searchdisplay', component : SearchdisplayComponent}
+>>>>>>> ee3c11e1a01e6e260cc4bc3313e94aca7690b0bd
 ]
 @NgModule({
   declarations: [
@@ -60,6 +88,7 @@ const AllRoutes = [
     ContactsComponent,
     AboutComponent,
     TermsComponent,
+    SearchdisplayComponent,
   ],
   imports: [
     BrowserModule,
