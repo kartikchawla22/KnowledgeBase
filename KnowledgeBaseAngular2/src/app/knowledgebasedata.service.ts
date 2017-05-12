@@ -30,12 +30,13 @@ export class KnowledgebasedataService {
     );
 }
 
-// GetSearch(): Observable<any>{
+GetSearch(SearchParam): Observable<any>{
   
-//     return this.httpService.get(a).map(
-//       data => data.json()
-//     );
-// }
+    return this.httpService.get(this.UrlObject.UrlObj.SearchUrl + SearchParam).map(
+      data => data.json()
+    );
+}
+
 PostHeadings(Form){
   let headers = new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({ headers: headers });

@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
 import { DataexchangeService } from './dataexchange.service';
 import {Configuration} from './config';
+import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
 const AllRoutes = [
   {
     path: 'users',
@@ -41,10 +42,9 @@ const AllRoutes = [
     path: 'terms',
     component: TermsComponent
   },
-  // { path : '', component:MainbodyComponent,
-  //   component:UsersComponent
-  // }
-  { path: 'addheading', component: AddheadingComponent }
+ 
+  { path: 'addheading', component: AddheadingComponent },
+{path : 'searchdisplay', component : SearchdisplayComponent}
 ]
 @NgModule({
   declarations: [
@@ -58,6 +58,7 @@ const AllRoutes = [
     ContactsComponent,
     AboutComponent,
     TermsComponent,
+    SearchdisplayComponent,
   ],
   imports: [
     BrowserModule,
