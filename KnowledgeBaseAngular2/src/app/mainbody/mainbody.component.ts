@@ -75,18 +75,7 @@ this.err = true;
 });
 }
 
-GetSearchlist(){
-this.KnowledgeService.GetSearch().subscribe(res=>{
- this.data=res
- this.err = false;
- console.log(this.data);
- 
-}
-,errorr =>{
-alert('Error') ;
-this.err = true;
-});
-}
+
 
 GetUsersist(){
 this.KnowledgeService.GetUsers().subscribe(res=>{

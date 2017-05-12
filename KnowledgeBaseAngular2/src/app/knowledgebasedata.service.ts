@@ -2,41 +2,48 @@ import { Injectable } from '@angular/core';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
 import { Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
+import  { Configuration } from './config';
 @Injectable()
 export class KnowledgebasedataService {
-  constructor(private httpService: Http,private httpService1: Http) { 
+  constructor(private httpService: Http, public UrlObject : Configuration) { 
   }
     
   GetTitles(): Observable<any>{
-    var a:string='http://192.168.15.148:4000/api/v1/titles';
-    return this.httpService.get(a).map(
+    
+    return this.httpService.get(this.UrlObject.UrlObj.TitlesUrl).map(
       data => data.json()
     );
   }
   
   GetHeadings(): Observable<any>{
-  var a:string='http://192.168.15.148:4000/api/v1/headings';
-    return this.httpService.get(a).map(
+  
+    return this.httpService.get(this.UrlObject.UrlObj.HeadingUrl).map(
       data => data.json()
     );
 }
 
 
  GetUsers(): Observable<any>{
-  var a:string='https://api.github.com/users/v1/users';
-    return this.httpService.get(a).map(
+ 
+    return this.httpService.get(this.UrlObject.UrlObj.UsersUr).map(
       data => data.json()
     );
 }
 
-GetSearch(): Observable<any>{
-  var a:string='http://192.168.15.148:4000/api/v1/search';
-    return this.httpService.get(a).map(
-      data => data.json()
-    );
+// GetSearch(): Observable<any>{
+  
+//     return this.httpService.get(a).map(
+//       data => data.json()
+//     );
+// }
+PostHeadings(Form){
+  let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({ headers: headers });
+    console.log(Form);
+    
+    return this.httpService.post(this.UrlObject.UrlObj.UsersUr, Form, headers).map((res: Response) => res.json());
+  
 }
-
 
      private handleError(error: any) {
 
