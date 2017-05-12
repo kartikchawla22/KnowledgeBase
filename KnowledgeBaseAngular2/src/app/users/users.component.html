@@ -1,5 +1,5 @@
 <div class="container">
-  <form [formGroup]='UserForm' #UserFormRef='ngForm' class="form-horizontal" (ngSubmit)='OnUserFormSubmit(UserFormRef)' name="Form">
+  <form [formGroup]='UserForm' #UserFormRef='ngForm' class="form-horizontal" (ngSubmit)='check(UserForm)' name="Form">
     <div class="form-group">
       <label class="control-label col-sm-2">Username</label>
       <div class="col-sm-6">
@@ -30,3 +30,4 @@
     </div>
   </form>
 </div>
+<router-outlet></router-outlet>

@@ -13,20 +13,20 @@ export class AppComponent {
   ShowMainBody = true;
   ShowSearch = true;
   constructor(private router: Router, private _route: ActivatedRoute) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        var path = event.url;
-        if (path === "/users") {
-          this.ShowHeader = false;
-          this.ShowMainBody = false;
-          this.ShowSearch = false;
-        }
-        else if (path === "/") {
-          this.ShowHeader = true;
-          this.ShowMainBody = true;
-          this.ShowSearch = true;
-        }
-      }
-    });
+  //   this.router.events.subscribe(event => {
+  //     if (event instanceof NavigationEnd) {
+  //       var path = event.url;
+  //       if (path === "/users") {
+  //         this.ShowHeader = false;
+  //         this.ShowMainBody = false;
+  //         this.ShowSearch = false;
+  //       }
+  //       else if (path === "/") {
+  //         this.ShowHeader = true;
+  //         this.ShowMainBody = true;
+  //         this.ShowSearch = true;
+  //       }
+  //     }
+  //   });
   }
 }
