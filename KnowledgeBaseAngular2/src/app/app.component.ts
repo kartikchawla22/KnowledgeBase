@@ -9,7 +9,8 @@ import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  ShowHeader = true;
+// This will Show and Hide the header, mainbody and search while moving on to the next or previous page. 
+  ShowHeader = true;      
   ShowMainBody = true;
   ShowSearch = true;
   constructor(private router: Router, private _route: ActivatedRoute) {
