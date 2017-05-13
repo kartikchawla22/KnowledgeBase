@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./mainbody.component.css'],
 })
 export class MainbodyComponent implements OnInit {
-data =[];
-HeadingsNameList = [];
-TitlesNamesList = [];
-HeadingTitleIdList = [];
-TitleIdList = [];
+data;
+HeadingsNameList;
+TitlesNamesList ;
+HeadingTitleIdList;
+TitleIdList ;
 Movies;
-Novels =[];
-Poems = [];
-Biography = [];
+Novels ;
+Poems ;
+Biography;
 Titles;
 CM = 0;
 CN = 0;
@@ -96,7 +96,10 @@ this.DataExchange.SendData(item);
 
   ngOnInit() 
   {
+   // this.GetHeadinglist();
+   //this.GetTitlelist();
+  }
+  abc(){
     this.GetHeadinglist();
-   this.GetTitlelist();
   }
 }
