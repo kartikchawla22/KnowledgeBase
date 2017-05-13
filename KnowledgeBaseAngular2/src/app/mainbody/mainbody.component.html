@@ -9,6 +9,8 @@
     <div>
       <ul *ngFor="let item of Movies; let i = index">
         <a routerLink='/movies' routerLinkActive="active" ><li (click) = "DisplayMovies(i)">{{item.H_Name}}</li></a>
+      <ul *ngFor="let item of Movies; let i=index">
+        <li (click) = "Display(item[i])"><a routerLink='/movies' routerLinkActive="active" >{{item.H_Name}}</a></li>
       </ul>
     </div>
    </div>

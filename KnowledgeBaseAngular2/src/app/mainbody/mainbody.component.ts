@@ -91,11 +91,16 @@ this.DataExchange.SendData(this.Movies[item]);
 DisplayBio(item){
   console.log(this.Movies[item] + " helllo");
 this.DataExchange.SendData(this.Movies[item]);
+}
+Display(item){
+  console.log(item+ "helllo");
+this.DataExchange.SendData(item);
+ this.router.navigate(['/showdata']);
 } 
 
   ngOnInit() 
   {
     this.GetHeadinglist();
-    this.GetTitlelist();
+   this.GetTitlelist();
   }
 }
