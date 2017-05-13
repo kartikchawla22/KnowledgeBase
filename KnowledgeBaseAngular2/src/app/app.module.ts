@@ -21,6 +21,7 @@ import { TermsComponent } from './terms/terms.component';
 import { DataexchangeService } from './dataexchange.service';
 import {Configuration} from './config';
 import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
+import { ShowdataComponent } from './showdata/showdata.component';
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
@@ -70,6 +71,7 @@ const AllRoutes = [
     AboutComponent,
     TermsComponent,
     SearchdisplayComponent,
+    ShowdataComponent,
   ],
   imports: [
     BrowserModule,
