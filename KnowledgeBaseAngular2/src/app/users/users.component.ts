@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Validators, FormGroup, FormBuilder, FormControl, FormsModule } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service';
+import { KnowledgebasedataService } from '../knowledgebasedata.service';
 
 @Component({
   selector: 'app-users',
@@ -9,29 +10,53 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class UsersComponent implements OnInit {
 
-
-  username:string;
-  password:string;
-
+sending;
+ UserLogin:{
+   username:string,
+   password:string
+  } = {
+    username: "",
+    password: ""
+  }
   public UserForm: FormGroup;        // This  is the UserForm of type FormGroup.
-
-  constructor(public FormValidation: FormBuilder,public send:AuthenticationService) {
+  
+  constructor(public FormValidation: FormBuilder,public send:AuthenticationService,public SendData:KnowledgebasedataService) {
 
 
     this.UserForm = this.FormValidation.group({
-      Username: [null, [Validators.required, Validators.pattern('[a-z]|[A-Z]')]],
-      Password: [null, [Validators.required]]   // This give the Validation for the UserForm. 
+      username: [null, [Validators.required, Validators.pattern('[a-z]|[A-Z]')]],
+      password: [null, [Validators.required]]   // This give the Validation for the UserForm. 
     });
 
   }
-a(){
-  alert("hello");
-}
   ngOnInit() {  }
 
 check(UserForm){
-  this.send.set(UserForm.value.Username,UserForm.value.Password)
+  console.log(UserForm);
+  // this.send.set(this.UserLogin);
+  this.sending = this.SendData.Postlogin(UserForm).subscribe(res =>{
+  console.log(UserForm);
+  console.log(res);
+},
+
+errorr =>{
+  alert("Error");
+});
+ this.sending = this.SendData.test();
+ console.log(this.sending._body);
+  if(this.sending._body == "true"){
+    console.log("this is working");
+  }
+  else if(UserForm.Username == null || UserForm.Password == null){
+    console.log("Enter some data");
+    return false;
+  }
+  else
+  {
+    console.log("user doenot exist");
+  }
 }
+
 
 }
 

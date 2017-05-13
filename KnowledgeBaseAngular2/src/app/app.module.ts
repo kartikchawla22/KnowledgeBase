@@ -24,7 +24,7 @@ import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component'
 const AllRoutes = [
 { path : '', component:MainbodyComponent},
 { path : 'users', 
-  component:UsersComponent,
+  component:UsersComponent
 // children:[
 //    {
 //      path:'addheading' ,
@@ -34,7 +34,8 @@ const AllRoutes = [
  },
   {
      path:'addheading' ,
-     component: AddheadingComponent,canActivate: [CanActivateViaAuthGuard]
+     component: AddheadingComponent
+     ,canActivate: [CanActivateViaAuthGuard]
    },
  {
    path : 'about',
@@ -79,7 +80,7 @@ const AllRoutes = [
     RouterModule.forRoot(AllRoutes)
   ],
  entryComponents:[],
-  providers: [KnowledgebasedataService, DataexchangeService,AuthenticationService,CanActivateViaAuthGuard, Configuration],
+  providers: [KnowledgebasedataService, DataexchangeService,AuthenticationService,Configuration,CanActivateViaAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

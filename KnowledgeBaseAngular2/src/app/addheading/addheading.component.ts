@@ -13,9 +13,11 @@ export class AddheadingComponent implements OnInit {
     H_Name: String,
     H_Data: String,
     T_ID: Number
-  }
-
-
+  } = {
+    H_Name: '',
+    H_Data: '',
+    T_ID: 0
+  };
   constructor(public DataExchange: DataexchangeService, public PostData: KnowledgebasedataService) { }
   AddHeading(id) {
     this.AddNewHeading.T_ID = id;

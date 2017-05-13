@@ -1,16 +1,16 @@
 <!-- User will feed his/her name in  Username.s -->
 <div class="container">
-  <form [formGroup]='UserForm' #UserFormRef='ngForm' class="form-horizontal" (ngSubmit)='check(UserForm)' name="Form">
+  <form [formGroup]='UserForm' #UserFormRef='ngForm' class="form-horizontal" (ngSubmit)='check(UserForm.value)' name="Form">
     <div class="form-group">
       <label class="control-label col-sm-2">Username</label>
       <div class="col-sm-6">
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input type="text" class="form-control" placeholder="Enter Username" name="Usernames" formControlName="Username">
+          <input type="text" class="form-control" placeholder="Enter Username" name="Username" formControlName="username">
 
         </div>
       </div>
-      <small *ngIf="!UserForm.controls['Username'].valid">*</small>
+      <small *ngIf="!UserForm.controls['username'].valid">*</small>
     </div>
 
 
@@ -20,10 +20,10 @@
       <div class="col-sm-6">
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-          <input type="password" class="form-control" placeholder="Enter password" name="Password" formControlName="Password">
+          <input type="password" class="form-control" placeholder="Enter password" name="Password" formControlName="password">
         </div>
       </div>
-      <small *ngIf="!UserForm.controls['Password'].valid">*</small>
+      <small *ngIf="!UserForm.controls['password'].valid">*</small>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
