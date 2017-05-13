@@ -7,6 +7,7 @@ export class DataexchangeService {
   DataObj;
   Titles;
   id;
+  Search;
   SendData(Obj) {
     console.log(Obj);
     this.DataObj = Obj;
@@ -27,5 +28,17 @@ export class DataexchangeService {
     console.log(this.Titles);
     return this.Titles;
   }
+
+SendSearchResult(Obj){
+  console.log(Obj);
+  this.Search = Obj;
+  console.log(this.Search);
+}
+
+GetSearchResult()
+{
+  console.log(this.Search);
+  return this.Search;
+}
 
 }

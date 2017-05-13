@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit) = 'AddHeading(DropDown.value)' #AddHeadingForm ='ngForm'>
+  <form (ngSubmit)='AddHeading(DropDown.value)' #AddHeadingForm='ngForm'>
     <input type="text" name="Heading" #Heading placeholder="Enter the new Heading" [(ngModel)]="AddNewHeading.H_Name">
     <input type="text" name="Data" #Data placeholder="Enter Data" [(ngModel)]="AddNewHeading.H_Data">
     <select #DropDown>
@@ -8,8 +8,6 @@
     <button>Submit</button>
   </form>
 </div>
-
 <div>
   hello
-</div>  
-
+</div>

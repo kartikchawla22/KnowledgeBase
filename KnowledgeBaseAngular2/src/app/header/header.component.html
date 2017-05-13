@@ -1,19 +1,20 @@
 <!-- This is  for routing of Login button and Add Heading. -->
-<div class="well">
+<div class="navbar navbar-inverse">
   <div class="row">
-    <div class="col-sm-4">
-      <a href="https://www.kelltontech.com/" target="_blank"><img src="https://www.drupal.org/files/styles/grid-3/public/kellton_-formerly-Tekriti-Software.png?itok=IV7hNqSW"></a>
+    <div class="col-md-4">
+      <a href="https://www.kelltontech.com/" target="_blank"><img src="https://www.kelltontech.com/sites/default/files/logo_1.png"></a>
     </div>
-    <div class="col-sm-4">
-      <h1>Knowledge Base</h1>
+    <div class="col-md-4">
+      <h1 style="color: grey">Knowledge Base</h1>
     </div>
-    <div class="col-sm-4">
-      <button class="btn btn-success">
-  <a routerLink = '/users'  routerLinkActive = "active">Login</a>
+    <div class="col-md-4">
+      <div class="col-md-6">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink = '/users'  routerLinkActive = "active">
+        <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
   <!--<a routerLink = '/addheading'  routerLinkActive = "active">Add Heading</a>-->
-  </button>
-
     </div>
-
+    </div>
   </div>
 </div>

@@ -2,6 +2,7 @@
 
 <!--<button (click) = "GetHeadinglist()">Click</button>-->
 <!-- This gives the list of Movies. -->
+<div [style.color] = "'grey'">
 <div class="row">
 <div class="col-sm-3">
   <h3 align="center">Movies</h3>
@@ -9,8 +10,6 @@
     <div>
       <ul *ngFor="let item of Movies; let i = index">
         <a routerLink='/movies' routerLinkActive="active" ><li (click) = "DisplayMovies(i)">{{item.H_Name}}</li></a>
-      <ul *ngFor="let item of Movies; let i=index">
-        <li (click) = "Display(item[i])"><a routerLink='/movies' routerLinkActive="active" >{{item.H_Name}}</a></li>
       </ul>
     </div>
    </div>
@@ -32,7 +31,7 @@
 <div class="col-sm-3">
   <h3 align="center">Poems</h3>
   <div class="well well-lg">
-    <ul *ngFor="let item of Poems; let i = index">
+    <ul [style.color] = "'grey'" *ngFor="let item of Poems; let i = index">
         <a routerLink='/poems' routerLinkActive="active" ><li (click) = "DisplayPoems(i)">{{item.H_Name}}</li></a>
     </ul>
   </div>
@@ -48,4 +47,7 @@
     </ul>
   </div>
 </div>
-
+</div>
+<div class="row">
+</div>
+</div>

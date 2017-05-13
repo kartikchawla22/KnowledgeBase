@@ -2,9 +2,13 @@
 <app-search *ngIf = "ShowSearch"></app-search>
 
 <app-mainbody *ngIf = "ShowMainBody"></app-mainbody>-->
-<app-header></app-header>
-<app-footer></app-footer>
+
+<div [style.background]=  "'black'">
+    <app-header></app-header>
+
 
 <!--<app-mainbody></app-mainbody>-->
 <router-outlet></router-outlet>
+<app-footer></app-footer>
+</div>
 <!--<app-addheading></app-addheading>-->

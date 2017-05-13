@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataexchangeService } from '../dataexchange.service';
+
 
 @Component({
   selector: 'app-searchdisplay',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchdisplay.component.css']
 })
 export class SearchdisplayComponent implements OnInit {
-
-  constructor() { }
-
+searchResults;
+  constructor(public searchdata : DataexchangeService ) { }
   ngOnInit() {
+ this.searchResults = this.searchdata.GetSearchResult();
+
   }
 
 }

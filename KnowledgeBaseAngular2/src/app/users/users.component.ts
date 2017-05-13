@@ -42,7 +42,7 @@ check(UserForm){
 errorr =>{
   alert("Error");
 });
- this.sending = this.SendData.test();
+//  this.sending = this.SendData.test();
  console.log(this.sending._body);
   if(this.sending._body == "true"){
     console.log("this is working");

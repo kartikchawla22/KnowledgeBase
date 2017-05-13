@@ -30,13 +30,11 @@ err = false;
 GetTitlelist(){
 this.KnowledgeService.GetTitles().subscribe(res=>{
  this.Titles=res
- this.err = false;
 this.DataExchange.SendTitles(this.Titles);
 
 }
 ,errorr =>{             // If there is an error it will alert an error.
 alert('Error') ;
-this.err = true;
 });
 }
 
@@ -45,7 +43,6 @@ this.err = true;
 GetHeadinglist(){
 this.KnowledgeService.GetHeadings().subscribe(res=>{
  this.data=res
- this.err = false;
  for ( var i = 0 ; i < this.data.length; i++){
 if(this.data[i].T_ID == 1)
 {
@@ -71,7 +68,6 @@ this.CB++;
 }
 ,errorr =>{            // If there is an error it will alert an error.
 alert('Error') ;
-this.err = true;
 });
 
 }

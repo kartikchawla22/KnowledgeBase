@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { KnowledgebasedataService } from '../knowledgebasedata.service';
 import { Router } from '@angular/router';
+import { DataexchangeService } from '../dataexchange.service';
 
 @Component({
   selector: 'app-search',
@@ -8,13 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-SearchItem;
-getresponse;
-  constructor(public search : KnowledgebasedataService, public router : Router) { }
-SearchDb(){
-// this.getresponse = this.search.GetSearch(this.SearchItem);
-console.log(this.getresponse);
-this.router.navigate(['/searchdisplay']);
+  SearchItem;
+  GetSearch;
+  constructor(public search: KnowledgebasedataService, public router: Router, public searchdata: DataexchangeService) { }
+  SearchDb() {
+    this.search.GetSearch(this.SearchItem).subscribe(res => {
+      this.GetSearch = res;
+      console.log(this.GetSearch);
+      this.searchdata.SendSearchResult(this.GetSearch);
+      this.router.navigate(['/searchdisplay']);
+    })
+
 }
   ngOnInit() {
   }
