@@ -8,6 +8,8 @@ export class DataexchangeService {
   Titles;
   id;
   Search;
+
+  
   SendData(Obj) {
     console.log(Obj);
     this.DataObj = Obj;
