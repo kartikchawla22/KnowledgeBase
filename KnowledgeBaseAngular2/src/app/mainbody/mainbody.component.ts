@@ -43,6 +43,11 @@ alert('Error') ;
 GetHeadinglist(){
 this.KnowledgeService.GetHeadings().subscribe(res=>{
  this.data=res
+console.log(this.data);
+}
+,errorr =>{            // If there is an error it will alert an error.
+alert('Error') ;
+});
  for ( var i = 0 ; i < this.data.length; i++){
 if(this.data[i].T_ID == 1)
 {
@@ -64,12 +69,6 @@ this.CB++;
 }
  }
  console.log(this.Movies);
- 
-}
-,errorr =>{            // If there is an error it will alert an error.
-alert('Error') ;
-});
-
 }
 
 DisplayMovies(item){
