@@ -33,7 +33,7 @@ export class AddheadingComponent implements OnInit {
   }
   ngOnInit() {
 
-    this.Titles = this.DataExchange.GetData();
+    this.Titles = this.DataExchange.GetTitles();
     console.log(this.Titles);
 
   }

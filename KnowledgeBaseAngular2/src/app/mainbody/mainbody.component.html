@@ -7,8 +7,8 @@
   <h3 align="center">Movies</h3>
   <div class="well well-lg">
     <div>
-      <ul *ngFor="let item of Movies">
-        <li (click) = "Display(item)"><a routerLink='/movies' routerLinkActive="active" >{{item.H_Name}}</a></li>
+      <ul *ngFor="let item of Movies; let i = index">
+        <a routerLink='/movies' routerLinkActive="active" ><li (click) = "DisplayMovies(i)">{{item.H_Name}}</li></a>
       </ul>
     </div>
    </div>
@@ -19,8 +19,8 @@
 <div class="col-sm-3">
   <h3 align="center">Novels</h3>
   <div class="well well-lg">
-    <ul *ngFor="let item of Novels">
-      <li><a routerLink='/novels' routerLinkActive="active" (click) = "Display(item.H_Id)">{{item.H_Name}}</a></li>
+    <ul *ngFor="let item of Novels; let i = index">
+        <a routerLink='/novels' routerLinkActive="active" ><li (click) = "DisplayNovels(i)">{{item.H_Name}}</li></a>
     </ul>
   </div>
 </div>
@@ -30,8 +30,8 @@
 <div class="col-sm-3">
   <h3 align="center">Poems</h3>
   <div class="well well-lg">
-    <ul *ngFor="let item of Poems">
-      <li><a routerLink='/poems' routerLinkActive="active" (click) = "Display(item.H_Id)">{{item.H_Name}}</a></li>
+    <ul *ngFor="let item of Poems; let i = index">
+        <a routerLink='/poems' routerLinkActive="active" ><li (click) = "DisplayPoems(i)">{{item.H_Name}}</li></a>
     </ul>
   </div>
 </div>
@@ -41,8 +41,8 @@
 <div class="col-sm-3">
   <h3 align="center">Biography</h3>
   <div class="well well-lg">
-    <ul *ngFor="let item of Biography">
-      <li><a routerLink='/biography' routerLinkActive="active" (click) = "Display(item.H_Id)">{{item.H_Name}}</a></li>
+   <ul *ngFor="let item of Biography; let i = index">
+        <a routerLink='/biography' routerLinkActive="active" ><li (click) = "DisplayBio(i)">{{item.H_Name}}</li></a>
     </ul>
   </div>
 </div>

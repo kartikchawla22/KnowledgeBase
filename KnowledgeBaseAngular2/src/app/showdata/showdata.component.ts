@@ -12,9 +12,9 @@ export class ShowdataComponent implements OnInit {
 item;
   ngOnInit() {
 this.item = this.dataexchange.GetData();
-    
   }
   abc(){
+    
     console.log(this.item);
   }
 

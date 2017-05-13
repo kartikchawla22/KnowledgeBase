@@ -14,7 +14,7 @@ HeadingsNameList = [];
 TitlesNamesList = [];
 HeadingTitleIdList = [];
 TitleIdList = [];
-Movies = [];
+Movies;
 Novels =[];
 Poems = [];
 Biography = [];
@@ -31,7 +31,7 @@ GetTitlelist(){
 this.KnowledgeService.GetTitles().subscribe(res=>{
  this.Titles=res
  this.err = false;
-this.DataExchange.SendData(this.Titles);
+this.DataExchange.SendTitles(this.Titles);
 
 }
 ,errorr =>{             // If there is an error it will alert an error.
@@ -73,12 +73,24 @@ this.CB++;
 alert('Error') ;
 this.err = true;
 });
+
 }
 
-display(item){
-  console.log(item+ "helllo");
-this.DataExchange.SendData(item);
-// this.router.navigate(['/showdata']);
+DisplayMovies(item){
+  console.log(this.Movies[item] + " helllo");
+this.DataExchange.SendData(this.Movies[item]);
+} 
+DisplayNovels(item){
+  console.log(this.Movies[item] + " helllo");
+this.DataExchange.SendData(this.Movies[item]);
+} 
+DisplayPoems(item){
+  console.log(this.Movies[item] + " helllo");
+this.DataExchange.SendData(this.Movies[item]);
+} 
+DisplayBio(item){
+  console.log(this.Movies[item] + " helllo");
+this.DataExchange.SendData(this.Movies[item]);
 } 
 
   ngOnInit() 
