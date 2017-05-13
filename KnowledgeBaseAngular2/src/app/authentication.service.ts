@@ -43,13 +43,18 @@ export class CanActivateViaAuthGuard implements CanActivate {
       
     if(this.UserLogin)
     {
-      alert("true");
+      // alert("true");
       return true;
     }
+
     // else{
     //   alert("false");
     //   return false;
     // } 
+    else{
+      // alert("false");
+      return false;
+    } 
     
   }
 } 

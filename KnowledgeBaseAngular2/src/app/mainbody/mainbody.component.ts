@@ -1,8 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {  KnowledgebasedataService } from '../knowledgebasedata.service';
 import { DataexchangeService } from '../dataexchange.service';
-import { Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mainbody',
@@ -25,7 +24,7 @@ CN = 0;
 CB = 0;
 CP = 0;
 err = false;
-  constructor( public KnowledgeService : KnowledgebasedataService, public DataExchange : DataexchangeService) {}
+  constructor( public KnowledgeService : KnowledgebasedataService, public DataExchange : DataexchangeService, public router :Router) {}
 
 // This function will get the list of titles.
 GetTitlelist(){
@@ -50,20 +49,20 @@ this.KnowledgeService.GetHeadings().subscribe(res=>{
  for ( var i = 0 ; i < this.data.length; i++){
 if(this.data[i].T_ID == 1)
 {
-  this.Movies[this.CM] = this.data[i].H_Name;
+  this.Movies[this.CM] = this.data[i];
   this.CM ++;
 }
 else if(this.data[i].T_ID == 2){
-  this.Novels[this.CN] = this.data[i].H_Name;
+  this.Novels[this.CN] = this.data[i];
   this.CN++;
 }
 else if(this.data[i].T_ID == 3){
 
-  this.Poems[this.CP] = this.data[i].H_Name;
+  this.Poems[this.CP] = this.data[i];
   this.CP++;
 }
 else{
-this.Biography[this.CB] = this.data[i].H_Name;
+this.Biography[this.CB] = this.data[i];
 this.CB++;
 }
  }
@@ -76,21 +75,10 @@ this.err = true;
 });
 }
 
-
-//This function will give the list of users those who can login.
-GetUsersist(){
-this.KnowledgeService.GetUsers().subscribe(res=>{
- this.data=res
- this.err = false;
- console.log(this.data);
- 
-}
-,errorr =>{            //If there is an error it will alert an error.
-alert('Error') ;
-this.err = true;
-});
-}
-   
+display(item){
+this.DataExchange.SendData(item);
+this.router.navigate(['/showdata']);
+} 
 
   ngOnInit() 
   {

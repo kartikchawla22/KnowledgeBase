@@ -13,7 +13,7 @@ getresponse;
   constructor(public search : KnowledgebasedataService, public router : Router) { }
 SearchDb(){
 // this.getresponse = this.search.GetSearch(this.SearchItem);
-// console.log(this.getresponse);
+console.log(this.getresponse);
 this.router.navigate(['/searchdisplay']);
 }
   ngOnInit() {
