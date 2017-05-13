@@ -76,8 +76,9 @@ this.err = true;
 }
 
 display(item){
+  console.log(item+ "helllo");
 this.DataExchange.SendData(item);
-this.router.navigate(['/showdata']);
+// this.router.navigate(['/showdata']);
 } 
 
   ngOnInit() 

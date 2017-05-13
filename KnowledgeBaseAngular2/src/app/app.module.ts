@@ -56,6 +56,10 @@ const AllRoutes = [
 {
   path : 'searchdisplay', 
   component : SearchdisplayComponent
+},
+{
+  path : "**",
+  component: ShowdataComponent
 }
 
 ]

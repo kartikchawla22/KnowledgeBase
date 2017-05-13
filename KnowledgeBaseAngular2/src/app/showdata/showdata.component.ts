@@ -14,5 +14,8 @@ item;
 this.item = this.dataexchange.GetData();
     
   }
+  abc(){
+    console.log(this.item);
+  }
 
 }
