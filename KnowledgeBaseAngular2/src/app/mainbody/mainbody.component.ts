@@ -31,7 +31,7 @@ GetTitlelist(){
 this.KnowledgeService.GetTitles().subscribe(res=>{
  this.Titles=res
  this.err = false;
-this.DataExchange.SendData(this.Titles);
+// this.DataExchange.SendData(this.Titles);
 
 }
 ,errorr =>{             // If there is an error it will alert an error.
@@ -75,15 +75,15 @@ this.err = true;
 });
 }
 
-display(item){
+Display(item){
   console.log(item+ "helllo");
 this.DataExchange.SendData(item);
-// this.router.navigate(['/showdata']);
+ this.router.navigate(['/showdata']);
 } 
 
   ngOnInit() 
   {
     this.GetHeadinglist();
-    this.GetTitlelist();
+   this.GetTitlelist();
   }
 }

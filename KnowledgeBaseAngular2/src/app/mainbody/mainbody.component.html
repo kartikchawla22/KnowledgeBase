@@ -7,8 +7,8 @@
   <h3 align="center">Movies</h3>
   <div class="well well-lg">
     <div>
-      <ul *ngFor="let item of Movies">
-        <li (click) = "Display(item)"><a routerLink='/movies' routerLinkActive="active" >{{item.H_Name}}</a></li>
+      <ul *ngFor="let item of Movies; let i=index">
+        <li (click) = "Display(item[i])"><a routerLink='/movies' routerLinkActive="active" >{{item.H_Name}}</a></li>
       </ul>
     </div>
    </div>
