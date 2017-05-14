@@ -26,6 +26,7 @@ export class DataexchangeService {
     this.Titles = Obj;
     console.log(this.Titles);
   }
+  
   GetTitles() {
     console.log(this.Titles);
     return this.Titles;
