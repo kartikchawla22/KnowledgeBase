@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./mainbody.component.css'],
 })
 export class MainbodyComponent implements OnInit {
-data;
+data = [];
 HeadingsNameList = [];
 TitlesNamesList = [];
 HeadingTitleIdList = [];
