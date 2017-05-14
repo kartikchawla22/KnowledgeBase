@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./mainbody.component.css'],
 })
 export class MainbodyComponent implements OnInit {
-data;
+data ;
 HeadingsNameList;
 TitlesNamesList ;
 HeadingTitleIdList;
 TitleIdList ;
-Movies;
-Novels ;
-Poems ;
-Biography;
+Movies=[];
+Novels=[] ;
+Poems=[];
+Biography=[];
 Titles;
 CM = 0;
 CN = 0;
@@ -43,12 +43,7 @@ alert('Error') ;
 GetHeadinglist(){
 this.KnowledgeService.GetHeadings().subscribe(res=>{
  this.data=res
-console.log(this.data);
-}
-,errorr =>{            // If there is an error it will alert an error.
-alert('Error') ;
-});
- for ( var i = 0 ; i < this.data.length; i++){
+  for ( var i = 0 ; i < this.data.length; i++){
 if(this.data[i].T_ID == 1)
 {
   this.Movies[this.CM] = this.data[i];
@@ -69,6 +64,13 @@ this.CB++;
 }
  }
  console.log(this.Movies);
+console.log(this.data);
+}
+,errorr =>{            // If there is an error it will alert an error.
+alert('Error') ;
+});
+
+ 
 }
 
 DisplayMovies(item){
@@ -76,16 +78,16 @@ DisplayMovies(item){
 this.DataExchange.SendData(this.Movies[item]);
 } 
 DisplayNovels(item){
-  console.log(this.Movies[item] + " helllo");
-this.DataExchange.SendData(this.Movies[item]);
+  console.log(this.Novels[item] + " helllo");
+this.DataExchange.SendData(this.Novels[item]);
 } 
 DisplayPoems(item){
-  console.log(this.Movies[item] + " helllo");
-this.DataExchange.SendData(this.Movies[item]);
+  console.log(this.Poems[item] + " helllo");
+this.DataExchange.SendData(this.Poems[item]);
 } 
 DisplayBio(item){
-  console.log(this.Movies[item] + " helllo");
-this.DataExchange.SendData(this.Movies[item]);
+  console.log(this.Biography[item] + " helllo");
+this.DataExchange.SendData(this.Biography[item]);
 }
 Display(item){
   console.log(item+ "helllo");
@@ -95,10 +97,10 @@ this.DataExchange.SendData(item);
 
   ngOnInit() 
   {
-   // this.GetHeadinglist();
-   //this.GetTitlelist();
-  }
-  abc(){
     this.GetHeadinglist();
+   this.GetTitlelist();
   }
+//   abc(){
+//     this.GetHeadinglist();
+//   }
 }

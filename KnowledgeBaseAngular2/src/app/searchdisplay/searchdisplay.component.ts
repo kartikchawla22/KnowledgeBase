@@ -11,6 +11,8 @@ export class SearchdisplayComponent implements OnInit {
 searchResults;
   constructor(public searchdata : DataexchangeService ) { }
   ngOnInit() {
+      
+
  this.searchResults = this.searchdata.GetSearchResult();
 
   }
