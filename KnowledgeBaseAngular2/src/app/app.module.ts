@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CanActivateViaAuthGuard } from './services/authentication.service';
 
 import { AuthenticationService } from './services/authentication.service';
-
+import {AllRoutes} from './route';
 import { AppComponent } from './app.component';
 import { MainbodyComponent } from './mainbody/mainbody.component';
 import { HeaderComponent } from './header/header.component';
@@ -23,7 +23,7 @@ import { Configuration } from './config';
 import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
 import { ShowdataComponent } from './showdata/showdata.component';
 
-const AllRoutes = Configuration.AllRoutes;
+// const AllRoutes = Configuration.AllRoutes;
 
 @NgModule({
   declarations: [
@@ -52,8 +52,5 @@ const AllRoutes = Configuration.AllRoutes;
   bootstrap: [AppComponent]
 })
 export class AppModule {
-<<<<<<< HEAD
-=======
-  
->>>>>>> 49d07a89ad798ca589b997a62ab0735c7966155e
+
  }
