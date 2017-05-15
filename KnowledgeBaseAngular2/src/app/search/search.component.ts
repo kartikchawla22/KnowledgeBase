@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { KnowledgebasedataService } from '../knowledgebasedata.service';
+import { KnowledgebasedataService } from '../services/knowledgebasedata.service';
 import { Router } from '@angular/router';
-import { DataexchangeService } from '../dataexchange.service';
+import { DataexchangeService } from '../services/dataexchange.service';
 
 @Component({
   selector: 'app-search',
@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
       this.router.navigate(['/searchdisplay']);
     })
 
-}
+  }
   ngOnInit() {
   }
 

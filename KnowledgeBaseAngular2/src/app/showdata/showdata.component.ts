@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataexchangeService } from '../dataexchange.service';
+import { DataexchangeService } from '../services/dataexchange.service';
 
 @Component({
   selector: 'app-showdata',
@@ -8,11 +8,12 @@ import { DataexchangeService } from '../dataexchange.service';
 })
 export class ShowdataComponent implements OnInit {
 
-  constructor(public dataexchange : DataexchangeService) { }
-item;
+  constructor(public dataexchange: DataexchangeService) { }
+  item;
   ngOnInit() {
-this.item = this.dataexchange.GetData();
+    this.item = this.dataexchange.GetData();
   }
+
   // abc(){
     
   //   console.log(this.item);

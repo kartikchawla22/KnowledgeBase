@@ -1,7 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder, FormControl, FormsModule } from '@angular/forms';
-import { AuthenticationService } from '../authentication.service';
-import { KnowledgebasedataService } from '../knowledgebasedata.service';
+import { AuthenticationService } from '../services/authentication.service';
+import { KnowledgebasedataService } from '../services/knowledgebasedata.service';
 
 @Component({
   selector: 'app-users',
@@ -10,17 +10,17 @@ import { KnowledgebasedataService } from '../knowledgebasedata.service';
 })
 export class UsersComponent implements OnInit {
 
-sending;
- UserLogin:{
-   username:string,
-   password:string
+  sending;
+  UserLogin: {
+    username: string,
+    password: string
   } = {
     username: "",
     password: ""
   }
   public UserForm: FormGroup;        // This  is the UserForm of type FormGroup.
-  
-  constructor(public FormValidation: FormBuilder,public send:AuthenticationService,public SendData:KnowledgebasedataService) {
+
+  constructor(public FormValidation: FormBuilder, public send: AuthenticationService, public SendData: KnowledgebasedataService) {
 
 
     this.UserForm = this.FormValidation.group({
@@ -29,33 +29,32 @@ sending;
     });
 
   }
-  ngOnInit() {  }
+  ngOnInit() { }
 
-check(UserForm){
-  console.log(UserForm);
-  // this.send.set(this.UserLogin);
-  this.sending = this.SendData.Postlogin(UserForm).subscribe(res =>{
-  console.log(UserForm);
-  console.log(res);
-},
+  check(UserForm) {
+    console.log(UserForm);
+    // this.send.set(this.UserLogin);
+    this.sending = this.SendData.Postlogin(UserForm).subscribe(res => {
+      console.log(UserForm);
+      console.log(res);
+    },
 
-errorr =>{
-  alert("Error");
-});
-//  this.sending = this.SendData.test();
- console.log(this.sending._body);
-  if(this.sending._body == "true"){
-    console.log("this is working");
+      errorr => {
+        alert("Error");
+      });
+    //  this.sending = this.SendData.test();
+    console.log(this.sending._body);
+    if (this.sending._body == "true") {
+      console.log("this is working");
+    }
+    else if (UserForm.Username == null || UserForm.Password == null) {
+      console.log("Enter some data");
+      return false;
+    }
+    else {
+      console.log("user doenot exist");
+    }
   }
-  else if(UserForm.Username == null || UserForm.Password == null){
-    console.log("Enter some data");
-    return false;
-  }
-  else
-  {
-    console.log("user doenot exist");
-  }
-}
 
 
 }
