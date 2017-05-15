@@ -10,7 +10,7 @@
 
         </div>
       </div>
-      <small *ngIf="!UserForm.controls['username'].valid" [style.color] = "'lightgrey'" ><span class="glyphicon glyphicon-asterisk"></span></small>
+      <small *ngIf="!UserForm.controls['username'].valid" [style.color]="'lightgrey'"><span class="glyphicon glyphicon-asterisk"></span></small>
     </div>
 
 
@@ -23,11 +23,12 @@
           <input type="password" class="form-control" placeholder="Enter password" name="Password" formControlName="password">
         </div>
       </div>
-      <small *ngIf="!UserForm.controls['password'].valid" [style.color] = "'lightgrey'" ><span class="glyphicon glyphicon-asterisk"></span></small>
+      <small *ngIf="!UserForm.controls['password'].valid" [style.color]="'lightgrey'"><span class="glyphicon glyphicon-asterisk"></span></small>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-default"  [disabled] = "!UserForm.valid">Submit</button> <!--This is the button to submit the users data. -->
+        <button class="btn btn-default" [disabled]="!UserForm.valid">Submit</button>
+        <!--This is the button to submit the users data. -->
       </div>
     </div>
   </form>

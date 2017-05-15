@@ -1,14 +1,5 @@
-<!--<app-header *ngIf="ShowHeader"></app-header>
-<app-search *ngIf = "ShowSearch"></app-search>
-
-<app-mainbody *ngIf = "ShowMainBody"></app-mainbody>-->
-
-<div [style.background]=  "'black'">
-    <app-header></app-header>
-
-
-<!--<app-mainbody></app-mainbody>-->
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div [style.background]="'black'">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
-<!--<app-addheading></app-addheading>-->

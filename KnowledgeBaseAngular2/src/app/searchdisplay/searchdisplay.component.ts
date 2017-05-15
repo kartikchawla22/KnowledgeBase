@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataexchangeService } from '../dataexchange.service';
+import { DataexchangeService } from '../services/dataexchange.service';
 
 
 @Component({
@@ -8,12 +8,12 @@ import { DataexchangeService } from '../dataexchange.service';
   styleUrls: ['./searchdisplay.component.css']
 })
 export class SearchdisplayComponent implements OnInit {
-searchResults;
-  constructor(public searchdata : DataexchangeService ) { }
+  searchResults;
+  constructor(public searchdata: DataexchangeService) { }
 
-  abc(){
-     this.searchResults = this.searchdata.GetSearchResult();
-     console.log(this.searchResults);
+  abc() {
+    this.searchResults = this.searchdata.GetSearchResult();
+    console.log(this.searchResults);
   }
   ngOnInit() {
 

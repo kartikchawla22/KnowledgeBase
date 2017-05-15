@@ -38,7 +38,7 @@ export class KnowledgebasedataService {
   }
 
   GetSearch(SearchParam): Observable<any> {
-console.log(SearchParam);
+    console.log(SearchParam);
     return this.httpService.get(this.UrlObject.UrlObj.SearchUrl + SearchParam).map(
       data => data.json()
     );
@@ -52,7 +52,7 @@ console.log(SearchParam);
     let options = new RequestOptions({ headers: headers });
     this.a = this.httpService.post(this.UrlObject.UrlObj.CheckUrl, UserLogin, headers)
       .map((response => {
-      this.check = response
+        this.check = response
         console.log(this.check._body);
       }
       ));

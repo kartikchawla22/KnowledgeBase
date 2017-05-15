@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataexchangeService } from '../dataexchange.service';
-import { KnowledgebasedataService } from '../knowledgebasedata.service';
+import { DataexchangeService } from '../services/dataexchange.service';
+import { KnowledgebasedataService } from '../services/knowledgebasedata.service';
 
 @Component({
   selector: 'app-addheading',
