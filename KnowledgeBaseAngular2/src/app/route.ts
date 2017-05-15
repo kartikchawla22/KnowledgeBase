@@ -22,35 +22,48 @@ import { DataexchangeService } from './services/dataexchange.service';
 import { Configuration } from './config';
 import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
 import { ShowdataComponent } from './showdata/showdata.component';
-import {AllRoutes} from './route';
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MainbodyComponent,
-    HeaderComponent,
-    FooterComponent,
-    SearchComponent,
-    UsersComponent,
-    AddheadingComponent,
-    ContactsComponent,
-    AboutComponent,
-    TermsComponent,
-    SearchdisplayComponent,
-    ShowdataComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(AllRoutes)
-  ],
-  entryComponents: [],
-  providers: [KnowledgebasedataService, DataexchangeService, AuthenticationService, Configuration, CanActivateViaAuthGuard],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-  
- }
+
+export const AllRoutes = [
+  { path: '', component: MainbodyComponent },
+  {
+    path: 'users',
+    component: UsersComponent
+    // children:[
+    //    {
+    //      path:'addheading' ,
+    //      component: AddheadingComponent
+    //    }
+    // ]
+  },
+  {
+    path: 'addheading',
+    component: AddheadingComponent
+    , canActivate: [CanActivateViaAuthGuard]
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+
+  {
+    path: 'contacts',
+    component: ContactsComponent
+  },
+
+  {
+    path: 'terms',
+    component: TermsComponent
+  },
+
+  {
+    path: 'searchdisplay',
+    component: SearchdisplayComponent
+  },
+  {
+    path: "**",
+    component: ShowdataComponent
+  }
+
+]
