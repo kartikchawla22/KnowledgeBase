@@ -20,47 +20,5 @@ export class Configuration {
         CheckUrl: 'http://192.168.15.148:4000/api/v1/Check',
     }
 
- static AllRoutes = [
-  { path: '', component: MainbodyComponent },
-  {
-    path: 'users',
-    component: UsersComponent
-    // children:[
-    //    {
-    //      path:'addheading' ,
-    //      component: AddheadingComponent
-    //    }
-    // ]
-  },
-  {
-    path: 'addheading',
-    component: AddheadingComponent
-    , canActivate: [CanActivateViaAuthGuard]
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-
-  {
-    path: 'contacts',
-    component: ContactsComponent
-  },
-
-  {
-    path: 'terms',
-    component: TermsComponent
-  },
-
-  {
-    path: 'searchdisplay',
-    component: SearchdisplayComponent
-  },
-  {
-    path: "**",
-    component: ShowdataComponent
-  }
-
-]
 
 }

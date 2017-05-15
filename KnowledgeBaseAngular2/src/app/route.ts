@@ -23,37 +23,47 @@ import { Configuration } from './config';
 import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
 import { ShowdataComponent } from './showdata/showdata.component';
 
-const AllRoutes = Configuration.AllRoutes;
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MainbodyComponent,
-    HeaderComponent,
-    FooterComponent,
-    SearchComponent,
-    UsersComponent,
-    AddheadingComponent,
-    ContactsComponent,
-    AboutComponent,
-    TermsComponent,
-    SearchdisplayComponent,
-    ShowdataComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(AllRoutes)
-  ],
-  entryComponents: [],
-  providers: [KnowledgebasedataService, DataexchangeService, AuthenticationService, Configuration, CanActivateViaAuthGuard],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-<<<<<<< HEAD
-=======
-  
->>>>>>> 49d07a89ad798ca589b997a62ab0735c7966155e
- }
+
+export const AllRoutes = [
+  { path: '', component: MainbodyComponent },
+  {
+    path: 'users',
+    component: UsersComponent
+    // children:[
+    //    {
+    //      path:'addheading' ,
+    //      component: AddheadingComponent
+    //    }
+    // ]
+  },
+  {
+    path: 'addheading',
+    component: AddheadingComponent
+    , canActivate: [CanActivateViaAuthGuard]
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+
+  {
+    path: 'contacts',
+    component: ContactsComponent
+  },
+
+  {
+    path: 'terms',
+    component: TermsComponent
+  },
+
+  {
+    path: 'searchdisplay',
+    component: SearchdisplayComponent
+  },
+  {
+    path: "**",
+    component: ShowdataComponent
+  }
+
+]
