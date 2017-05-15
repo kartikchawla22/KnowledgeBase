@@ -15,27 +15,24 @@ export class KnowledgebasedataService {
   }
 
   GetTitles(): Observable<any> {
-
     return this.httpService.get(this.UrlObject.UrlObj.TitlesUrl).map(
       data => data.json()
     );
   }
 
   GetHeadings(): Observable<any> {
-
     return this.httpService.get(this.UrlObject.UrlObj.HeadingUrl).map(
       data => data.json()
     );
   }
 
 
-
   GetUsers(): Observable<any> {
-
     return this.httpService.get(this.UrlObject.UrlObj.UsersUr).map(
       data => data.json()
     );
   }
+
 
   GetSearch(SearchParam): Observable<any> {
     console.log(SearchParam);
@@ -43,8 +40,6 @@ export class KnowledgebasedataService {
       data => data.json()
     );
   }
-
-
 
 
   Postlogin(UserLogin): Observable<any> {
@@ -67,17 +62,8 @@ export class KnowledgebasedataService {
     console.log(Form);
 
     return this.httpService.post(this.UrlObject.UrlObj.UsersUr, Form, headers).map((res: Response) => res.json());
-
   }
 
-  private handleError(error: any) {
-
-    if (error.status === 401) {
-      return Observable.throw(error.status);
-    } else {
-      return Observable.throw(error.status || 'Server error');
-    }
-  }
 
 
   test(): any {

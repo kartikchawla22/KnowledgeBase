@@ -10,13 +10,9 @@ import { DataexchangeService } from '../services/dataexchange.service';
 export class SearchdisplayComponent implements OnInit {
   searchResults;
   constructor(public searchdata: DataexchangeService) { }
-
-  abc() {
+  ngOnInit() {
     this.searchResults = this.searchdata.GetSearchResult();
     console.log(this.searchResults);
-  }
-  ngOnInit() {
-
 
   }
 

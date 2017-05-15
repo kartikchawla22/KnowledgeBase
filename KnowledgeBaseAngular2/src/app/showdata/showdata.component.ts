@@ -13,9 +13,4 @@ export class ShowdataComponent implements OnInit {
   ngOnInit() {
     this.item = this.dataexchange.GetData();
   }
-  abc() {
-
-    console.log(this.item);
-  }
-
 }

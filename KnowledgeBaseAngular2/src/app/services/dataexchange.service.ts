@@ -15,6 +15,8 @@ export class DataexchangeService {
     this.DataObj = Obj;
     console.log(this.DataObj);
   }
+
+
   GetData() {
     console.log(this.DataObj);
     return this.DataObj;
@@ -27,16 +29,19 @@ export class DataexchangeService {
     console.log(this.Titles);
   }
 
+
   GetTitles() {
     console.log(this.Titles);
     return this.Titles;
   }
+
 
   SendSearchResult(Obj) {
     console.log(Obj);
     this.Search = Obj;
     console.log(this.Search);
   }
+
 
   GetSearchResult() {
     console.log(this.Search);
