@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { CanActivateViaAuthGuard } from './services/authentication.service';
-
 import { AuthenticationService } from './services/authentication.service';
 import {AllRoutes} from './route';
 import { AppComponent } from './app.component';

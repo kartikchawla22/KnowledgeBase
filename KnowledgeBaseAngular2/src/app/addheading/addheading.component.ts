@@ -21,15 +21,12 @@ export class AddheadingComponent implements OnInit {
   constructor(public DataExchange: DataexchangeService, public PostData: KnowledgebasedataService) { }
   AddHeading(id) {
     this.AddNewHeading.T_ID = id;
-    this.PostData.PostHeadings(this.AddNewHeading).subscribe(data => { return true; }
+    this.PostData.PostHeadings(this.AddNewHeading).subscribe(data => { console.log(data); }
       , errorr => { console.log(errorr) }
 
     )
     console.log(this.AddNewHeading);
 
-  }
-  getdetails(Drop) {
-    console.log(Drop);
   }
   ngOnInit() {
 

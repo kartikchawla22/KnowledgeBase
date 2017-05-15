@@ -63,7 +63,7 @@ export class KnowledgebasedataService {
     let options = new RequestOptions({ headers: headers });
     console.log(Form);
 
-    return this.httpService.post(this.UrlObject.UrlObj.UsersUr, Form, headers).map((res: Response) => res.json());
+    return this.httpService.post(this.UrlObject.UrlObj.HeadingUrl, Form, headers).map((res: Response) => res.json());
   }
 
 
