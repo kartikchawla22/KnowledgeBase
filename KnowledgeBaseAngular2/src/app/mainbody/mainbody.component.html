@@ -29,7 +29,7 @@
 <div class="col-sm-3">
   <h3 align="center">Poems</h3>
   <div class="well well-lg">
-    <ul [style.color] = "'grey'" *ngFor="let item of Poems; let i = index">
+    <ul *ngFor="let item of Poems; let i = index">
         <a routerLink='/poems' routerLinkActive="active" ><li (click) = "DisplayPoems(i)">{{item.H_Name}}</li></a>
     </ul>
   </div>
