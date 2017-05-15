@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder, FormControl, FormsModule } from '@angular/forms';
 import { AuthenticationService } from '../services/authentication.service';
 import { KnowledgebasedataService } from '../services/knowledgebasedata.service';
+import { CanActivateViaAuthGuard } from '../services/authentication.service';
 
 @Component({
   selector: 'app-users',
@@ -20,7 +21,7 @@ export class UsersComponent implements OnInit {
   }
   public UserForm: FormGroup;        // This  is the UserForm of type FormGroup.
 
-  constructor(public FormValidation: FormBuilder, public send: AuthenticationService, public SendData: KnowledgebasedataService) {
+  constructor(public test:CanActivateViaAuthGuard,public FormValidation: FormBuilder, public send: AuthenticationService, public SendData: KnowledgebasedataService) {
 
 
     this.UserForm = this.FormValidation.group({
@@ -33,8 +34,9 @@ export class UsersComponent implements OnInit {
 
   check(UserForm) {
     console.log(UserForm);
-    // this.send.set(this.UserLogin);
-    this.sending = this.SendData.Postlogin(UserForm).subscribe(res => {
+    this.send.set(this.UserLogin);
+    this.sending = this.send.Postlogin(UserForm).subscribe(res => {
+
       console.log(UserForm);
       console.log(res);
     },
@@ -43,7 +45,7 @@ export class UsersComponent implements OnInit {
         alert("Error");
       });
     //  this.sending = this.SendData.test();
-    console.log(this.sending._body);
+    // alert(this.sending._body);
     if (this.sending._body == "true") {
       console.log("this is working");
     }
