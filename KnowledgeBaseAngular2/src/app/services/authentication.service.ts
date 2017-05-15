@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { KnowledgebasedataService } from './services/knowledgebasedata.service';
+import { KnowledgebasedataService } from './knowledgebasedata.service';
 
 // class FlowGuard implements CanActivate {
 //   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot){

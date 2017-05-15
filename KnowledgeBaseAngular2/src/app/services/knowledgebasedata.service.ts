@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Http, RequestOptions, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { Configuration } from './config';
+import { Configuration } from '../config';
 import { AuthenticationService } from './authentication.service';
 import { CanActivate, Router } from '@angular/router';
-import { AddheadingComponent } from './addheading/addheading.component';
+import { AddheadingComponent } from '../addheading/addheading.component';
 @Injectable()
 export class KnowledgebasedataService {
   public data;
