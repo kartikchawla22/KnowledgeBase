@@ -29,7 +29,7 @@ export class MainbodyComponent implements OnInit {
 
     }
       , errorr => {             // If there is an error it will alert an error.
-        alert('Error');
+        alert(errorr);
       });
   }
 
@@ -63,7 +63,7 @@ export class MainbodyComponent implements OnInit {
       console.log(this.data);
     }
       , errorr => {            // If there is an error it will alert an error.
-        alert('Error');
+        alert(errorr);
       });
 
 
