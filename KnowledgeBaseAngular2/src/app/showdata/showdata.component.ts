@@ -13,9 +13,9 @@ item;
   ngOnInit() {
 this.item = this.dataexchange.GetData();
   }
-  abc(){
+  // abc(){
     
-    console.log(this.item);
-  }
+  //   console.log(this.item);
+  // }
 
 }
