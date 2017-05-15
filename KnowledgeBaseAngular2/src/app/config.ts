@@ -20,7 +20,7 @@ export class Configuration {
         CheckUrl: 'http://192.168.15.148:4000/api/v1/Check',
     }
 
-public AllRoutes = [
+ static AllRoutes = [
   { path: '', component: MainbodyComponent },
   {
     path: 'users',

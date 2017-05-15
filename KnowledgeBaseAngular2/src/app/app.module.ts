@@ -23,7 +23,7 @@ import { Configuration } from './config';
 import { SearchdisplayComponent } from './searchdisplay/searchdisplay.component';
 import { ShowdataComponent } from './showdata/showdata.component';
 
-const AllRoutes = this.routes.AllRoutes;
+const AllRoutes = Configuration.AllRoutes;
 
 @NgModule({
   declarations: [
@@ -52,5 +52,4 @@ const AllRoutes = this.routes.AllRoutes;
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(public routes : Configuration ){}
  }
